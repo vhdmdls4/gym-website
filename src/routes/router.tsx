@@ -1,4 +1,5 @@
-import App from 'components/App'
+import Home from 'domains/Home'
+import App from 'layout/App'
 import {
   Route,
   createBrowserRouter,
@@ -26,10 +27,10 @@ export const router = createBrowserRouter(
           // errorElement={<GenericErrorPage />}
         />
       </Route> */}
-      <Route>
+      <Route element={<App />}>
         <Route
           path="/"
-          element={<App />}
+          element={<Home />}
           // errorElement={<GenericErrorPage />}
           // handle={{
           //   crumb: () => <Link to="/login">Messages</Link>,
