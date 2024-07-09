@@ -1,4 +1,15 @@
-import { Box, Card, Flex, Grid, Heading, Section } from '@radix-ui/themes'
+import {
+  Avatar,
+  Badge,
+  Box,
+  Button,
+  Card,
+  Flex,
+  Grid,
+  Heading,
+  IconButton,
+  Text
+} from '@radix-ui/themes'
 import {
   SiAdidas,
   SiNewbalance,
@@ -7,11 +18,11 @@ import {
   SiThunderstore,
   SiUnderarmour
 } from 'react-icons/si'
-import Growth from 'assets/growth-logo.png'
 import { IoMdFitness } from 'react-icons/io'
-import BannerImage from 'assets/banner-image-op1.jpg'
-import BannerImage2 from 'assets/scott-webb-bannerimage.jpg'
+import BannerImage from 'assets/scott-webb-bannerimage.jpg'
 import styles from './Home.module.css'
+import { MdPeople, MdTimer } from 'react-icons/md'
+import { MagnifyingGlassIcon, PlusIcon } from '@radix-ui/react-icons'
 
 type Props = {}
 
@@ -39,14 +50,87 @@ export default function Home({}: Props) {
           </p>
           <p>Be Strong. Be aesthetic.</p>
         </div>
+        <Flex gap={'3'} mt={'5'}>
+          <Button size={'4'} variant="solid" highContrast>
+            Start Now!
+          </Button>
+          <Button size={'4'} variant="outline" highContrast>
+            Download App
+          </Button>
+        </Flex>
       </Flex>
-      <Flex>
+      <Flex className="relative">
         <img
           src={BannerImage}
           alt="Woman doing exercises with a bar"
           title="Fitness Banner"
           className={styles.homeBannerImage}
         />
+        <Box position={'absolute'} maxWidth="280px">
+          <Card>
+            <Flex gap="3" align="center" direction={'column'}>
+              <Flex gap={'3'} align={'center'}>
+                <MdPeople size={30} />
+                <Box>
+                  <Text as="div" size="2" weight="regular">
+                    Experience trainer
+                  </Text>
+                </Box>
+                <IconButton size="1" variant="soft" highContrast>
+                  <PlusIcon width="15" height="15" />
+                </IconButton>
+              </Flex>
+              <Flex className="-space-x-3 rtl:space-x-revers">
+                <Avatar
+                  size="3"
+                  src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?&w=64&h=64&dpr=2&q=70&crop=focalpoint&fp-x=0.67&fp-y=0.5&fp-z=1.4&fit=crop"
+                  radius="full"
+                  fallback="T"
+                  className="border-2 border-white dark:border-gray-800"
+                />
+                <Avatar
+                  size="3"
+                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  radius="full"
+                  fallback="T"
+                  className="border-2 border-white dark:border-gray-800"
+                />
+                <Avatar
+                  size="3"
+                  src="https://plus.unsplash.com/premium_photo-1664298528358-790433ba0815?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  radius="full"
+                  fallback="T"
+                  className="border-2 border-white dark:border-gray-800"
+                />
+                <Avatar
+                  size="3"
+                  src="https://plus.unsplash.com/premium_photo-1683134080778-aaa686741d0a?q=80&w=1884&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  radius="full"
+                  fallback="T"
+                  className="border-2 border-white dark:border-gray-800"
+                />
+                <Badge size="1" color="iris" variant="solid">
+                  100+
+                </Badge>
+              </Flex>
+            </Flex>
+          </Card>
+        </Box>
+        <Box position={'absolute'} bottom={'5'} maxWidth="280px">
+          <Card className="space-y-3">
+            <Flex gap="3" align="center">
+              <MdTimer size={30} />
+              <Box>
+                <Text as="div" size="2" weight="regular">
+                  Repetition training
+                </Text>
+              </Box>
+            </Flex>
+            <Text as="div" size="2" weight="regular" align={'left'}>
+              20 minutes
+            </Text>
+          </Card>
+        </Box>
         {/* <img
           src={BannerImage2}
           alt="Woman with muscles defined"
