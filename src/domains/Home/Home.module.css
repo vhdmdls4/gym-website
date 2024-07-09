@@ -13,13 +13,14 @@
     rgba(29, 26, 57, 1) 15%,
     rgba(52, 34, 60, 1) 22%,
     rgba(29, 26, 57, 1) 28%,
-    rgba(0, 0, 0, 1) 35%,
-    rgba(0, 0, 0, 1) 100%
+    rgba(20, 18, 34, 1) 35%,
+    rgba(16, 16, 16, 1) 100%
   );
 }
 
 .homeBannerImage {
   animation: myAnim 2s ease 0s 1 normal forwards;
+  color: rgb(16, 16, 16);
 }
 
 @keyframes myAnim {
