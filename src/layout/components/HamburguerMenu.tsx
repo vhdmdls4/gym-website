@@ -8,7 +8,7 @@ export default function HamburguerMenu({}: Props) {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger>
         <Button variant="ghost" title="Navigation" className="p-5">
-          <HamburgerMenuIcon />
+          <HamburgerMenuIcon width={30} height={30} />
         </Button>
       </DropdownMenu.Trigger>
       <DropdownMenu.Content>
