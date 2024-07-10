@@ -15,7 +15,7 @@ export default function AppHeader({}: Props) {
           <Text weight={'medium'}>Strong Fitness</Text>
         </Flex>
 
-        <TabsMenu />
+        <TabsMenu classNames="invisible md:visible" />
         <HamburguerMenu />
       </Flex>
     </header>

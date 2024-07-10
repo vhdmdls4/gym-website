@@ -10,9 +10,13 @@ const tabsType: Record<TabStyle, string> = {
 const toggleGroupItemClasses =
   'dark:data-[state=on]:bg-white dark:data-[state=on]:text-black'
 
-export default function TabsMenu() {
+interface Props {
+  classNames?: string
+}
+
+export default function TabsMenu({ classNames }: Props) {
   return (
-    <SegmentedControl.Root defaultValue="home" size="3">
+    <SegmentedControl.Root defaultValue="home" size="3" className={classNames}>
       <SegmentedControl.Item className={toggleGroupItemClasses} value="home">
         Home
       </SegmentedControl.Item>
