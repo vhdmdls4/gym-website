@@ -22,7 +22,8 @@ import { IoMdFitness } from 'react-icons/io'
 import BannerImage from 'assets/scott-webb-bannerimage.jpg'
 import styles from './Home.module.css'
 import { MdPeople, MdTimer } from 'react-icons/md'
-import { MagnifyingGlassIcon, PlusIcon } from '@radix-ui/react-icons'
+import { PlusIcon } from '@radix-ui/react-icons'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 type Props = {}
 
@@ -116,7 +117,7 @@ export default function Home({}: Props) {
             </Flex>
           </Card>
         </Box>
-        <Box position={'absolute'} bottom={'5'} maxWidth="280px">
+        <Box position={'absolute'} bottom={'5'} left="9" maxWidth="280px">
           <Card className="space-y-3">
             <Flex gap="3" align="center">
               <MdTimer size={30} />
@@ -131,11 +132,36 @@ export default function Home({}: Props) {
             </Text>
           </Card>
         </Box>
+        <Box
+          position="absolute"
+          right="2"
+          maxWidth="290px"
+          className="inset-y-2/4"
+        >
+          <Card className="flex">
+            <Flex gapX={'3'}>
+              <Text
+                as="div"
+                size="2"
+                weight="regular"
+                className="flex"
+                align={'right'}
+              >
+                <div className="flex justify-start">
+                  <a href="#">
+                    <FaExternalLinkAlt size={20} />
+                  </a>
+                </div>
+                Start building your core muscles with this quick start guide.
+              </Text>
+            </Flex>
+          </Card>
+        </Box>
         {/* <img
           src={BannerImage2}
           alt="Woman with muscles defined"
           title="Fitness Banner"
-        /> */}
+          /> */}
         {/* <Flex gapX={'3'}>
           <Card className="flex flex-col items-center justify-center p-3">
             <img src={Growth} alt="Growth" className="w-32 h-32" />
