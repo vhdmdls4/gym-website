@@ -1,7 +1,7 @@
-import { GlobeIcon } from '@radix-ui/react-icons'
 import { Flex, Text } from '@radix-ui/themes'
 import TabsMenu from './components/TabsMenu'
 import HamburguerMenu from './components/HamburguerMenu'
+import { GiWeightLiftingUp } from 'react-icons/gi'
 
 type Props = {}
 
@@ -11,7 +11,7 @@ export default function AppHeader({}: Props) {
       <Flex justify={'between'}>
         <Flex justify={'center'} gap={'3'} align={'center'}>
           {' '}
-          <GlobeIcon width={30} height={30} />
+          <GiWeightLiftingUp size={25} />
           <Text weight={'medium'}>Strong Fitness</Text>
         </Flex>
 

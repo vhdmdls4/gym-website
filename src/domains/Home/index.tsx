@@ -52,21 +52,24 @@ export default function Home({}: Props) {
           <p>Be Strong. Be aesthetic.</p>
         </div>
         <Flex gap={'3'} mt={'5'}>
-          <Button size={'4'} variant="solid" highContrast>
+          <Button size={'4'} variant="solid" highContrast color="gray">
             Start Now!
           </Button>
-          <Button size={'4'} variant="outline" highContrast>
+          <Button size={'4'} variant="outline" highContrast color="gray">
             Download App
           </Button>
         </Flex>
       </Flex>
       <Flex className="relative">
-        <img
-          src={BannerImage}
-          alt="Woman doing exercises with a bar"
-          title="Fitness Banner"
-          className={styles.homeBannerImage}
-        />
+        <div className="flex justify-center self-center w-full">
+          <img
+            src={BannerImage}
+            alt="Woman doing exercises with a bar"
+            title="Fitness Banner"
+            className={styles.homeBannerImage}
+            width={400}
+          />
+        </div>
         <Box position={'absolute'} maxWidth="280px">
           <Card>
             <Flex gap="3" align="center" direction={'column'}>
@@ -77,7 +80,7 @@ export default function Home({}: Props) {
                     Experience trainer
                   </Text>
                 </Box>
-                <IconButton size="1" variant="soft" highContrast>
+                <IconButton size="1" variant="soft" highContrast color="gray">
                   <PlusIcon width="15" height="15" />
                 </IconButton>
               </Flex>
@@ -170,8 +173,8 @@ export default function Home({}: Props) {
         </Flex> */}
       </Flex>
       <Flex className="flex flex-col align-end col-span-full my-5">
-        Collabs with
-        <Flex gap={'8'}>
+        <span className="flex self-center sm:self-auto">Collabs with</span>
+        <Flex className="gap-3">
           <SiAdidas size={60} />
           <SiNike size={60} />
           <SiNewbalance size={60} />

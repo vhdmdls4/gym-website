@@ -21,6 +21,7 @@
 .homeBannerImage {
   animation: myAnim 2s ease 0s 1 normal forwards;
   color: rgb(16, 16, 16);
+  background-position: center;
 }
 
 @keyframes myAnim {

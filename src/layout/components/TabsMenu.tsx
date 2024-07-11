@@ -8,7 +8,7 @@ const tabsType: Record<TabStyle, string> = {
 }
 
 const toggleGroupItemClasses =
-  'dark:data-[state=on]:bg-white dark:data-[state=on]:text-black'
+  'dark:data-[state=on]:bg-gray-100 dark:data-[state=on]:text-black'
 
 interface Props {
   classNames?: string
