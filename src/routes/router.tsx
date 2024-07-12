@@ -1,4 +1,5 @@
 import Home from 'domains/Home'
+import Pricing from 'domains/Pricing'
 import App from 'layout/App'
 import {
   Route,
@@ -36,6 +37,7 @@ export const router = createBrowserRouter(
           //   crumb: () => <Link to="/login">Messages</Link>,
           // }}
         />
+        <Route path="/pricing" element={<Pricing />} />
       </Route>
     </>
   )

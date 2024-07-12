@@ -1,4 +1,5 @@
 import { SegmentedControl } from '@radix-ui/themes'
+import { Link, useLocation } from 'react-router-dom'
 
 type TabStyle = 'menu' | 'custom'
 
@@ -15,6 +16,8 @@ interface Props {
 }
 
 export default function TabsMenu({ classNames }: Props) {
+  const location = useLocation()
+  function handlePageChange() {}
   return (
     <SegmentedControl.Root defaultValue="home" size="3" className={classNames}>
       <SegmentedControl.Item className={toggleGroupItemClasses} value="home">
@@ -24,7 +27,9 @@ export default function TabsMenu({ classNames }: Props) {
         Service
       </SegmentedControl.Item>
       <SegmentedControl.Item className={toggleGroupItemClasses} value="pricing">
-        Pricing
+        <Link className="w-full h-full" to={'/pricing'}>
+          Pricing
+        </Link>
       </SegmentedControl.Item>
       <SegmentedControl.Item className={toggleGroupItemClasses} value="whyUs">
         Why Us
