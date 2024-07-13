@@ -1,4 +1,5 @@
 import { Grid, Heading } from '@radix-ui/themes'
+import TablePlans from './components/TablePlans'
 
 export default function Pricing() {
   return (
@@ -6,6 +7,7 @@ export default function Pricing() {
       <Heading as="h1" size={'9'} weight={'medium'}>
         Pricing
       </Heading>
+      <TablePlans />
     </Grid>
   )
 }
