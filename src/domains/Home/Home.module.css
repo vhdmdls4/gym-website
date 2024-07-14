@@ -27,13 +27,9 @@
 @keyframes myAnim {
   0% {
     opacity: 0;
-    transform: rotateY(70deg);
-    transform-origin: right;
   }
 
   100% {
     opacity: 1;
-    transform: rotateY(0);
-    transform-origin: right;
   }
 }
