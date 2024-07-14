@@ -7,6 +7,13 @@ import {
   createRoutesFromElements
 } from 'react-router-dom'
 
+// const loader = async () => {
+//   if (!navigator.onLine) {
+//     return redirect('/login')
+//   }
+//   return null
+// }
+
 export const router = createBrowserRouter(
   createRoutesFromElements(
     //father route can be used to define a layout for the app
@@ -38,6 +45,30 @@ export const router = createBrowserRouter(
           // }}
         />
         <Route path="/pricing" element={<Pricing />} />
+        <Route
+          path="/why-us"
+          element={<Home />}
+          // errorElement={<GenericErrorPage />}
+          // handle={{
+          //   crumb: () => <Link to="/login">Messages</Link>,
+          // }}
+        />
+        <Route
+          path="/our-work"
+          element={<Home />}
+          // errorElement={<GenericErrorPage />}
+          // handle={{
+          //   crumb: () => <Link to="/login">Messages</Link>,
+          // }}
+        />
+        <Route
+          path="/service"
+          element={<Home />}
+          // errorElement={<GenericErrorPage />}
+          // handle={{
+          //   crumb: () => <Link to="/login">Messages</Link>,
+          // }}
+        />
       </Route>
     </>
   )
