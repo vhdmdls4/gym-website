@@ -1,7 +1,7 @@
 import { Flex, Text } from '@radix-ui/themes'
 import TabsMenu from './components/TabsMenu'
-import HamburguerMenu from './components/HamburguerMenu'
 import { GiWeightLiftingUp } from 'react-icons/gi'
+import Sidebar from './components/Sidebar'
 
 type Props = {}
 
@@ -15,8 +15,9 @@ export default function AppHeader({}: Props) {
           <Text weight={'medium'}>Strong Fitness</Text>
         </Flex>
 
-        <TabsMenu classNames="invisible md:visible" />
-        <HamburguerMenu />
+        <TabsMenu />
+        <Sidebar />
+        {/* <HamburguerMenu /> */}
       </Flex>
     </header>
   )
