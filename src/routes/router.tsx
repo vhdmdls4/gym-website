@@ -1,5 +1,6 @@
 import Home from 'domains/Home'
 import Pricing from 'domains/Pricing'
+import WhyUs from 'domains/WhyUs'
 import App from 'layout/App'
 import {
   Route,
@@ -47,7 +48,7 @@ export const router = createBrowserRouter(
         <Route path="/pricing" element={<Pricing />} />
         <Route
           path="/why-us"
-          element={<Home />}
+          element={<WhyUs />}
           // errorElement={<GenericErrorPage />}
           // handle={{
           //   crumb: () => <Link to="/login">Messages</Link>,
