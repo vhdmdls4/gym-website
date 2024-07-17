@@ -1,85 +1,160 @@
-import { Avatar, Box, Card, Flex, Grid, Heading, Text } from '@radix-ui/themes'
+import {
+  AspectRatio,
+  Avatar,
+  Box,
+  Card,
+  Container,
+  Flex,
+  Grid,
+  Heading,
+  Section,
+  Text
+} from '@radix-ui/themes'
 
 export default function WhyUs() {
   return (
     <>
-      <Grid columns={{ xs: '1', sm: '2' }} gap="5" width="auto">
+      <Grid columns={{ xs: '1', sm: '2' }} gap="5" width="auto" mb={'9'}>
         <Heading as="h1" size={'9'} weight={'medium'}>
           Why Us
         </Heading>
-        <Box maxWidth={'298px'}>
-          <Card className="p-6">
-            <Heading
-              as="h1"
-              size={'5'}
-              weight={'medium'}
+        <Box maxWidth={'400px'}></Box>
+        <Heading as="h1" size={'9'} weight={'medium'}>
+          Why Us
+        </Heading>
+        <Box></Box>
+      </Grid>
+      <Container minWidth={'100dvw'}>
+        <Section className="bg-gray-800">
+          <Grid
+            rows={{ sm: '1', md: '2' }}
+            gap="5"
+            width="w-screen"
+            height={'650px'}
+          >
+            <Flex
+              direction={'column'}
+              justify={'center'}
               align={'center'}
-              mb={'3'}
+              width={'500px'}
+              className="mx-auto"
             >
-              Experiences
-            </Heading>
-            <Flex gap="3" align="center" direction={'column'}>
-              <Grid
-                rows={'2'}
-                columns={'2'}
-                justify={'center'}
-                align={'center'}
-              >
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1675364965052-fdb98d1ddd67?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWdhY2hhbWVudG98ZW58MHx8MHx8fDA%3D"
-                  alt="Teodros Girmay"
-                  width="100%"
-                  className="rounded-2xl col-span-12"
-                />
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1675364965052-fdb98d1ddd67?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWdhY2hhbWVudG98ZW58MHx8MHx8fDA%3D"
-                  alt="Teodros Girmay"
-                  width="250"
-                  className="rounded-2xl"
-                />
-              </Grid>
-
               <Box>
-                <Text as="div" size="2" weight="regular">
-                  Teodros Girmay
+                <Heading as="h2" size={'7'} weight={'medium'}>
+                  Stay Strong and Fit for a Better Life
+                </Heading>
+                <Text className="w-100">
+                  Becoming stronger and maintaining a fit lifestyle brings
+                  numerous benefits that go beyond just physical appearance. It
+                  boosts productivity, enhances overall health, increases
+                  attractiveness, and improves mental well-being. By integrating
+                  fitness into your daily routine, you can transform your life
+                  in various positive ways. Explore the cards below to discover
+                  the amazing impact of fitness on different aspects of your
+                  life.
                 </Text>
               </Box>
             </Flex>
-          </Card>
-        </Box>
-        <Heading as="h1" size={'9'} weight={'medium'}>
-          Why Us
-        </Heading>
-        <Box></Box>
-      </Grid>
-      <Grid columns={{ sm: '1', md: '2' }} gap="5" width="auto">
-        <Heading as="h1" size={'9'} weight={'medium'}>
-          Why Us
-        </Heading>
-        <Flex
-          direction={'column'}
-          gapY={'3'}
-          justify={'center'}
-          maxWidth={'160px'}
-        >
-          <Avatar
-            size="9"
-            src="https://plus.unsplash.com/premium_photo-1675364965052-fdb98d1ddd67?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWdhY2hhbWVudG98ZW58MHx8MHx8fDA%3D"
-            radius="small"
-            fallback="T"
-          />
-          <Box>
-            <Text as="div" size="2" weight="bold" align={'center'}>
-              Teodros Girmay
-            </Text>
-          </Box>
-        </Flex>
+            <Flex
+              direction={{ sm: 'column', md: 'row' }}
+              justify={'center'}
+              align={'center'}
+              gap={'5'}
+              wrap={'wrap'}
+            >
+              <Box width={'396px'} height={'316px'}>
+                <Card className="w-full h-full" style={{ padding: '2rem' }}>
+                  <Flex
+                    justify={'center'}
+                    direction={'column'}
+                    align={'center'}
+                  >
+                    <Avatar
+                      size="7"
+                      src="https://pbs.twimg.com/profile_images/1438920716781462531/4Z7tjV1-_400x400.jpg"
+                      radius="small"
+                      fallback="T"
+                      className=""
+                    />
+                    <Heading
+                      className="p-5"
+                      as="h3"
+                      size={'9'}
+                      weight={'medium'}
+                    >
+                      20%
+                    </Heading>
+                  </Flex>
 
-        <Heading as="h1" size={'9'} weight={'medium'}>
-          Why Us
-        </Heading>
-        <Box></Box>
-      </Grid>
+                  <Text>
+                    increased of overall Productivity. Regular exercise improves
+                    focus, energy levels, and more.
+                  </Text>
+                </Card>
+              </Box>
+              <Box width={'396px'} height={'316px'}>
+                <Card className="w-full h-full" style={{ padding: '2rem' }}>
+                  <Flex
+                    justify={'center'}
+                    direction={'column'}
+                    align={'center'}
+                  >
+                    <Avatar
+                      size="7"
+                      src="https://pbs.twimg.com/profile_images/1438920716781462531/4Z7tjV1-_400x400.jpg"
+                      radius="small"
+                      fallback="T"
+                      className=""
+                    />
+                    <Heading
+                      className="p-5"
+                      as="h3"
+                      size={'9'}
+                      weight={'medium'}
+                    >
+                      35%
+                    </Heading>
+                  </Flex>
+                  <Text>
+                    improvement in mental health. Exercise releases endorphins,
+                    reducing stress and anxiety.
+                  </Text>
+                </Card>
+              </Box>
+
+              <Box width={'396px'} height={'316px'}>
+                <Card className="w-full h-full" style={{ padding: '2rem' }}>
+                  <Flex
+                    justify={'center'}
+                    direction={'column'}
+                    align={'center'}
+                  >
+                    <Avatar
+                      size="7"
+                      src="https://pbs.twimg.com/profile_images/1438920716781462531/4Z7tjV1-_400x400.jpg"
+                      radius="small"
+                      fallback="T"
+                      className=""
+                    />
+                    <Heading
+                      className="p-5"
+                      as="h3"
+                      size={'9'}
+                      weight={'medium'}
+                    >
+                      25%
+                    </Heading>
+                  </Flex>
+                  <Text>
+                    boost in attractiveness. Fitness enhances physical
+                    appearance and confidence.
+                  </Text>
+                </Card>
+              </Box>
+            </Flex>
+          </Grid>
+        </Section>
+      </Container>
     </>
   )
 }
