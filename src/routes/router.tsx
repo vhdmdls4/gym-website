@@ -1,5 +1,5 @@
 import Home from 'domains/Home'
-import Pricing from 'domains/Pricing'
+import Plans from 'domains/Plans'
 import WhyUs from 'domains/WhyUs'
 import App from 'layout/App'
 import {
@@ -45,7 +45,7 @@ export const router = createBrowserRouter(
           //   crumb: () => <Link to="/login">Messages</Link>,
           // }}
         />
-        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/plans" element={<Plans />} />
         <Route
           path="/why-us"
           element={<WhyUs />}
