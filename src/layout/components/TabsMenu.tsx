@@ -24,9 +24,9 @@ export default function TabsMenu({ hidden }: Props) {
       case 'home':
         navigate('/')
         break
-      case 'service':
-        navigate('/service')
-        break
+      // case 'service':
+      //   navigate('/service')
+      //   break
       case 'plans':
         navigate('/Plans')
         break
@@ -54,12 +54,12 @@ export default function TabsMenu({ hidden }: Props) {
         <SegmentedControl.Item className={toggleGroupItemClasses} value="home">
           Home
         </SegmentedControl.Item>
-        <SegmentedControl.Item
+        {/* <SegmentedControl.Item
           className={toggleGroupItemClasses}
           value="service"
         >
           Service
-        </SegmentedControl.Item>
+        </SegmentedControl.Item> */}
         <SegmentedControl.Item className={toggleGroupItemClasses} value="plans">
           Plans
         </SegmentedControl.Item>

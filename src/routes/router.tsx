@@ -62,14 +62,15 @@ export const router = createBrowserRouter(
           //   crumb: () => <Link to="/login">Messages</Link>,
           // }}
         />
-        <Route
+        {/* <Route
           path="/service"
           element={<Home />}
           // errorElement={<GenericErrorPage />}
           // handle={{
           //   crumb: () => <Link to="/login">Messages</Link>,
-          // }}
-        />
+          // 
+         />
+         */}
       </Route>
     </>
   )
