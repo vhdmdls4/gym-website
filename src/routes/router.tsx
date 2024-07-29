@@ -38,7 +38,7 @@ export const router = createBrowserRouter(
       </Route> */}
       <Route element={<App />}>
         <Route
-          path="/"
+          path="/gym-website"
           element={<Home />}
           // errorElement={<GenericErrorPage />}
           // handle={{
