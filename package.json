@@ -1,5 +1,6 @@
 {
   "name": "gym-website",
+  "homepage": "https://vhdmdls4.github.io/gym-website",
   "description": "Website for a generic gym",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +13,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "deploy": "gh-pages -d build",
     "serve": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --ui",
