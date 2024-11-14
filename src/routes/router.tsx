@@ -1,4 +1,5 @@
 import Home from 'domains/Home'
+import { JoinUs } from 'domains/JoinUs'
 import Plans from 'domains/Plans'
 import WhyUs from 'domains/WhyUs'
 import App from 'layout/App'
@@ -36,18 +37,18 @@ export const router = createBrowserRouter(
           // errorElement={<GenericErrorPage />}
         />
       </Route> */}
-      <Route element={<App />}>
+      <Route path="gym-website/" element={<App />}>
         <Route
-          path="/gym-website"
+          index
           element={<Home />}
           // errorElement={<GenericErrorPage />}
           // handle={{
           //   crumb: () => <Link to="/login">Messages</Link>,
           // }}
         />
-        <Route path="/plans" element={<Plans />} />
+        <Route path="plans" element={<Plans />} />
         <Route
-          path="/why-us"
+          path="why-us"
           element={<WhyUs />}
           // errorElement={<GenericErrorPage />}
           // handle={{
@@ -55,8 +56,16 @@ export const router = createBrowserRouter(
           // }}
         />
         <Route
-          path="/our-work"
+          path="our-work"
           element={<Home />}
+          // errorElement={<GenericErrorPage />}
+          // handle={{
+          //   crumb: () => <Link to="/login">Messages</Link>,
+          // }}
+        />
+        <Route
+          path="join-us"
+          element={<JoinUs />}
           // errorElement={<GenericErrorPage />}
           // handle={{
           //   crumb: () => <Link to="/login">Messages</Link>,
