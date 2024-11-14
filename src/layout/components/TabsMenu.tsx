@@ -22,19 +22,22 @@ export default function TabsMenu({ hidden }: Props) {
   const handleValueChange = (value: string) => {
     switch (value) {
       case 'home':
-        navigate('/')
+        navigate('')
         break
       // case 'service':
       //   navigate('/service')
       //   break
       case 'plans':
-        navigate('/Plans')
+        navigate('plans')
         break
       case 'whyUs':
-        navigate('/why-us')
+        navigate('why-us')
         break
       case 'ourWork':
-        navigate('/our-work')
+        navigate('our-work')
+        break
+      case 'joinUs':
+        navigate('join-us')
         break
       default:
         break
@@ -71,6 +74,12 @@ export default function TabsMenu({ hidden }: Props) {
           value="ourWork"
         >
           Our work
+        </SegmentedControl.Item>
+        <SegmentedControl.Item
+          className={toggleGroupItemClasses}
+          value="joinUs"
+        >
+          Join Us
         </SegmentedControl.Item>
       </SegmentedControl.Root>
     </div>
