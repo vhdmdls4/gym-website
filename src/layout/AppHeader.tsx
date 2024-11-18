@@ -2,6 +2,7 @@ import { Flex, Text } from '@radix-ui/themes'
 import TabsMenu from './components/TabsMenu'
 import { GiWeightLiftingUp } from 'react-icons/gi'
 import Sidebar from './components/Sidebar'
+import Show from '@/components/solidjs/Show'
 
 type Props = {}
 
@@ -11,12 +12,15 @@ export default function AppHeader({}: Props) {
       <Flex justify={'between'}>
         <Flex justify={'center'} gap={'3'} align={'center'}>
           {' '}
-          <GiWeightLiftingUp size={25} />
-          <Text weight={'medium'}>Strong Fitness</Text>
+          <GiWeightLiftingUp size={30} />
+          <Text size={'5'} weight={'medium'}>
+            Strong Fitness
+          </Text>
         </Flex>
-
         <TabsMenu />
-        <Sidebar />
+        <div className="visible lg:invisible">
+          <Sidebar />
+        </div>
         {/* <HamburguerMenu /> */}
       </Flex>
     </header>
