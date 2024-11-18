@@ -32,7 +32,6 @@ type Props = {}
 export default function Home({}: Props) {
   return (
     <Grid columns={{ xs: '1', sm: '2' }} gap="5" width="auto">
-      <div className={styles.backgroundStripes} />
       <Flex direction={'column'}>
         <div className="space-y-1">
           <Heading as="h1" size={'9'} weight={'medium'}>
@@ -46,10 +45,10 @@ export default function Home({}: Props) {
           </Heading>
         </div>
         <div className="my-3">
-          <p>
+          <p className="leading-relaxed text-lg">
             Start your fitness journey with us today and achieve your goals.
           </p>
-          <p>Be Strong. Be aesthetic.</p>
+          <p className="leading-relaxed text-lg">Be Strong. Be aesthetic.</p>
         </div>
         <Flex gap={'3'} mt={'5'} justify={{ initial: 'center', sm: 'start' }}>
           <Button size={'4'} variant="solid" highContrast color="gray">
