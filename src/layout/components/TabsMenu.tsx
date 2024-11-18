@@ -16,28 +16,27 @@ interface Props {
   hidden?: boolean
 }
 
+const BASE_PATH = import.meta.env.PROD ? '/gym-website' : '/gym-website'
+
 export default function TabsMenu({ hidden }: Props) {
   const navigate = useNavigate()
 
   const handleValueChange = (value: string) => {
     switch (value) {
       case 'home':
-        navigate('')
+        navigate(`${BASE_PATH}/`)
         break
-      // case 'service':
-      //   navigate('/service')
-      //   break
       case 'plans':
-        navigate('plans')
+        navigate(`${BASE_PATH}/plans`)
         break
       case 'whyUs':
-        navigate('why-us')
+        navigate(`${BASE_PATH}/why-us`)
         break
       case 'ourWork':
-        navigate('our-work')
+        navigate(`${BASE_PATH}/our-work`)
         break
       case 'joinUs':
-        navigate('join-us')
+        navigate(`${BASE_PATH}/join-us`)
         break
       default:
         break

@@ -4,6 +4,7 @@ import Plans from 'domains/Plans'
 import WhyUs from 'domains/WhyUs'
 import App from 'layout/App'
 import {
+  Navigate,
   Route,
   createBrowserRouter,
   createRoutesFromElements
@@ -38,6 +39,7 @@ export const router = createBrowserRouter(
         />
       </Route> */}
       <Route path="gym-website/" element={<App />}>
+        <Route path="" element={<Navigate to="/gym-website/" replace />} />
         <Route
           index
           element={<Home />}
