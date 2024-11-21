@@ -8,13 +8,16 @@ export default function Plans() {
         <Heading as="h1" size={'9'} weight={'medium'}>
           Plans
         </Heading>
-        <div className="my-3">
-          <p>
-            At our gym, we believe in providing our members with a comprehensive
-            fitness experience tailored to their needs. Our membership plans
-            offer a variety of amenities and perks designed to help you achieve
-            your fitness goals. Choose from our Plus or Premium plans to access
-            additional benefits.
+        <div className="mt-3">
+          <p className="leading-relaxed text-lg">
+            At Strong Fitness, we provide a comprehensive fitness experience
+            tailored to your needs. Our membership plans offer a variety of
+            amenities and perks to help you achieve your fitness goals.
+          </p>
+          <p className="leading-relaxed text-lg mt-3">
+            Choose from our <strong>Plus</strong> or <strong>Premium</strong>{' '}
+            plans to access additional benefits and elevate your fitness
+            journey.
           </p>
         </div>
       </Box>
