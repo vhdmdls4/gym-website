@@ -1,4 +1,4 @@
-import { Flex, Text } from '@radix-ui/themes'
+import { Button, Flex, Text } from '@radix-ui/themes'
 import TabsMenu from './components/TabsMenu'
 import { GiWeightLiftingUp } from 'react-icons/gi'
 import Sidebar from './components/Sidebar'
@@ -9,7 +9,7 @@ type Props = {}
 export default function AppHeader({}: Props) {
   return (
     <header className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8 pt-5">
-      <Flex justify={'between'}>
+      <Flex justify="between">
         <Flex justify={'center'} gap={'3'} align={'center'}>
           {' '}
           <GiWeightLiftingUp size={30} />
@@ -18,10 +18,14 @@ export default function AppHeader({}: Props) {
           </Text>
         </Flex>
         <TabsMenu />
-        <div className="visible lg:invisible">
+        <div className="lg:hidden block">
           <Sidebar />
         </div>
-        {/* <HamburguerMenu /> */}
+        <div className="hidden lg:block">
+          <Button size="4" variant="solid" highContrast color="gray">
+            Register
+          </Button>
+        </div>
       </Flex>
     </header>
   )
