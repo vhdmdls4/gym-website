@@ -22,10 +22,6 @@ export default function WhyUs() {
           Why Us
         </Heading>
         <Box maxWidth={'400px'}></Box>
-        <Heading as="h1" size={'9'} weight={'medium'}>
-          Why Us
-        </Heading>
-        <Box></Box>
       </Grid>
       <Container minWidth={'100dvw'}>
         <Section className="bg-gray-800">
