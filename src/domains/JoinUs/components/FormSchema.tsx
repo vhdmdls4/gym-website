@@ -150,12 +150,12 @@ export function ProfileForm() {
                   <PopoverTrigger asChild>
                     <FormControl>
                       <Button
-                        variant="solid"
+                        variant="outline"
+                        color="gray"
                         className={cn(
-                          'w-[240px] pl-3 text-left font-normal',
+                          'pl-3 text-left font-normal',
                           !field.value && 'text-muted-foreground'
                         )}
-                        color="gray"
                       >
                         {field.value ? (
                           format(field.value, 'PPP')
@@ -174,7 +174,6 @@ export function ProfileForm() {
                       disabled={(date) =>
                         date > new Date() || date < new Date('1900-01-01')
                       }
-                      initialFocus
                     />
                   </PopoverContent>
                 </Popover>
