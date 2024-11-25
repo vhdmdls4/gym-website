@@ -4,23 +4,14 @@ import {
   FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { Button, Grid } from '@radix-ui/themes'
+import { Button, Grid, Spinner } from '@radix-ui/themes'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 import { z } from 'zod'
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue
-} from '@/components/ui/select'
-import { Link } from 'react-router-dom'
 import { Calendar } from '@/components/ui/calendar'
 import {
   Popover,
@@ -32,6 +23,8 @@ import { CalendarIcon } from '@radix-ui/react-icons'
 import { format } from 'date-fns'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Label } from '@/components/ui/label'
+import { useToast } from '@/hooks/use-toast'
+import { useState } from 'react'
 
 enum Plan {
   PLUS = 'plus',
@@ -53,17 +46,15 @@ const formSchema = z.object({
     .min(10, { message: 'Phone number must be at least 10 digits.' })
     .max(15, { message: 'Phone number must not exceed 15 digits.' }),
   plan: z.enum([Plan.PLUS, Plan.PREMIUM]),
-  zu: z
-    .string({
-      required_error: 'Please select an email to display.'
-    })
-    .email(),
   birthdate: z.date({
     message: 'Please enter a valid date in the format YYYY-MM-DD.'
   })
 })
 
 export function ProfileForm() {
+  const { toast } = useToast()
+  const [loading, setLoading] = useState(false)
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -76,13 +67,34 @@ export function ProfileForm() {
     }
   })
 
-  // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
     console.log(values)
+    toast({
+      title: 'Confirmation email sent successfully',
+      description: 'Check your inbox to confirm your subscription and details.',
+      variant: null
+    })
   }
-  function onSubmit2(data: z.infer<typeof formSchema>) {}
+
+  const delayedPromise = (): Promise<string> =>
+    new Promise((resolve) => {
+      setTimeout(() => {
+        resolve('Promise após 1500ms')
+      }, 2000)
+    })
+
+  const handleClick = async (e: Event) => {
+    e.preventDefault()
+    setLoading(true)
+    try {
+      await delayedPromise()
+      form.handleSubmit(onSubmit)()
+    } catch (error) {
+      console.error(error)
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <Form {...form}>
@@ -153,9 +165,11 @@ export function ProfileForm() {
                         variant="outline"
                         color="gray"
                         className={cn(
-                          'pl-3 text-left font-normal',
+                          'text-left font-normal rounded-md h-9 w-full',
                           !field.value && 'text-muted-foreground'
                         )}
+                        size="3"
+                        type="button"
                       >
                         {field.value ? (
                           format(field.value, 'PPP')
@@ -177,8 +191,8 @@ export function ProfileForm() {
                     />
                   </PopoverContent>
                 </Popover>
-                <FormDescription>
-                  Your date of birth is used to calculate your age.
+                <FormDescription className="ps-2">
+                  Date of birth.
                 </FormDescription>
                 <FormMessage />
               </FormItem>
@@ -187,7 +201,7 @@ export function ProfileForm() {
           <RadioGroup
             defaultValue={Plan.PREMIUM}
             orientation="horizontal"
-            className="flex space-x-8"
+            className="flex space-x-8 items-center pb-7"
           >
             <div className="flex items-center space-x-2">
               <RadioGroupItem
@@ -244,8 +258,11 @@ export function ProfileForm() {
             highContrast
             color="gray"
             className="col-span-full"
+            type="submit"
+            onClick={handleClick}
           >
             Submit
+            {loading && <Spinner />}
           </Button>
         </Grid>
       </form>
