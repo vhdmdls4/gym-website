@@ -67,8 +67,9 @@ export function ProfileForm() {
     }
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values)
+    await delayedPromise()
     toast({
       title: 'Confirmation email sent successfully',
       description: 'Check your inbox to confirm your subscription and details.',
@@ -79,16 +80,15 @@ export function ProfileForm() {
   const delayedPromise = (): Promise<string> =>
     new Promise((resolve) => {
       setTimeout(() => {
-        resolve('Promise após 1500ms')
-      }, 2000)
+        resolve('Promise após 500ms')
+      }, 500)
     })
 
   const handleClick = async (e: Event) => {
     e.preventDefault()
     setLoading(true)
     try {
-      await delayedPromise()
-      form.handleSubmit(onSubmit)()
+      await form.handleSubmit(onSubmit)()
     } catch (error) {
       console.error(error)
     } finally {
