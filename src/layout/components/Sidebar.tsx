@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/sheet'
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
+import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 
 interface SidebarProps {
   isOpen?: boolean
@@ -102,7 +103,9 @@ export default function Sidebar({ isOpen, handleOpen }: SidebarProps) {
     // </Drawer.Root>
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline">Open</Button>
+        <Button variant="ghost" color="gray">
+          <HamburgerMenuIcon width={30} height={30} color="white" />
+        </Button>
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
