@@ -20,6 +20,17 @@ const BASE_PATH = import.meta.env.PROD ? '/gym-website' : '/gym-website'
 
 export default function TabsMenu({ hidden }: Props) {
   const navigate = useNavigate()
+  const location = useLocation()
+
+  const routeToTabValue: Record<string, string> = {
+    [`${BASE_PATH}/`]: 'home',
+    [`${BASE_PATH}/plans`]: 'plans',
+    [`${BASE_PATH}/why-us`]: 'whyUs',
+    [`${BASE_PATH}/our-work`]: 'ourWork',
+    [`${BASE_PATH}/join-us`]: 'joinUs'
+  }
+
+  const currentTabValue = routeToTabValue[location.pathname] || 'home'
 
   const handleValueChange = (value: string) => {
     switch (value) {
@@ -52,6 +63,7 @@ export default function TabsMenu({ hidden }: Props) {
           handleValueChange(value)
         }}
         className=""
+        value={currentTabValue}
       >
         <SegmentedControl.Item className={toggleGroupItemClasses} value="home">
           Home
