@@ -1,4 +1,6 @@
-.backgroundStripes {
+import styled from 'styled-components'
+
+export const StripedBackground = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -16,4 +18,4 @@
     rgba(20, 18, 34, 1) 35%,
     rgba(16, 16, 16, 1) 100%
   );
-}
+`
