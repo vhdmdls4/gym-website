@@ -1,5 +1,5 @@
 import { Box, Grid, Heading } from '@radix-ui/themes'
-import TablePlans from './components/TablePlans'
+import PlanTable from './components/PlanTable'
 
 export default function Plans() {
   return (
@@ -21,7 +21,7 @@ export default function Plans() {
           </p>
         </div>
       </Box>
-      <TablePlans />
+      <PlanTable />
     </Grid>
   )
 }
