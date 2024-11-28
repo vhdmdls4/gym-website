@@ -1,0 +1,31 @@
+.homeBannerImage {
+  animation: myAnim 2s ease 0s 1 normal forwards;
+  color: rgb(16, 16, 16);
+  background-position: center;
+  position: relative;
+
+  background-size: cover;
+
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-size: cover;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-size: cover;
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
