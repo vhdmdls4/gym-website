@@ -84,7 +84,7 @@ export function ProfileForm() {
       }, 500)
     })
 
-  const handleClick = async (e: Event) => {
+  const handleClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     setLoading(true)
     try {
@@ -94,6 +94,11 @@ export function ProfileForm() {
     } finally {
       setLoading(false)
     }
+  }
+
+  //a good use of handleFormChange to use with naive inputs and states like objects:
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target
   }
 
   return (
