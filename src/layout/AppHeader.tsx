@@ -19,11 +19,11 @@ export default function AppHeader({}: Props) {
             Strong Fitness
           </Text>
         </Flex>
-        <TabsMenu />
-        <div className="lg:hidden block">
+        {/* <TabsMenu /> */}
+        {/* <div className="lg:hidden block">
           <Sidebar />
-        </div>
-        <div className="hidden lg:block">
+        </div> */}
+        <div className="block">
           <Button
             size="4"
             variant="solid"
