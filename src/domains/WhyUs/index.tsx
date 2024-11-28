@@ -18,7 +18,7 @@ export default function WhyUs() {
   return (
     <>
       <Grid columns={{ xs: '1', sm: '2' }} gap="5" width="auto" mb={'9'}>
-        <Heading as="h1" size={'9'} weight={'medium'}>
+        <Heading as="h3" size={'6'} weight={'medium'}>
           Why Us
         </Heading>
         <Box maxWidth={'400px'}></Box>
@@ -34,7 +34,7 @@ export default function WhyUs() {
             >
               <Box width={'100%'} mb={'5'} px={'5'} maxWidth={'1100px'}>
                 <Heading
-                  as="h2"
+                  as="h3"
                   size={'7'}
                   weight={'medium'}
                   align={'center'}

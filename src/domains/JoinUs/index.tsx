@@ -1,22 +1,11 @@
-import { Box, Flex, Grid, Heading } from '@radix-ui/themes'
-import stylesHome from '../Home/Home.module.css'
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage
-} from '@/components/ui/form'
-import { useForm } from 'react-hook-form'
+import { Box, Grid, Heading } from '@radix-ui/themes'
 import { ProfileForm } from './components/FormSchema'
 
 export function JoinUs() {
   return (
     <Grid columns={{ sm: '1', md: '2' }} gap="8" width="auto">
       <Box>
-        <Heading as="h1" size={'9'} weight={'medium'}>
+        <Heading as="h3" size={'6'} weight={'medium'}>
           Join Us Today!
         </Heading>
         <div className="my-3">
