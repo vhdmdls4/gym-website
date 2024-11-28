@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const StripedBackground = styled.div`
+interface StripedBackgroundProps {
+  filter?: string
+}
+
+export const StripedBackground = styled.div<StripedBackgroundProps>`
   position: absolute;
   top: 0;
   left: 0;
@@ -8,7 +12,7 @@ export const StripedBackground = styled.div`
   height: 100vh;
   z-index: -1;
   background: rgb(0, 0, 0);
-  filter: blur(100px);
+  filter: (${(props) => props.filter || 'none'});
   background: linear-gradient(
     45deg,
     rgba(0, 0, 0, 1) 5%,
