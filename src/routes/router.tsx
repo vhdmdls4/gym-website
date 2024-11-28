@@ -39,7 +39,7 @@ export const router = createBrowserRouter(
         />
       </Route> */}
       <Route path="gym-website/" element={<App />}>
-        <Route path="" element={<Navigate to="/gym-website/" replace />} />
+        <Route path="*" element={<Navigate to="/gym-website/" replace />} />
         <Route
           index
           element={<Home />}
@@ -48,7 +48,7 @@ export const router = createBrowserRouter(
           //   crumb: () => <Link to="/login">Messages</Link>,
           // }}
         />
-        <Route path="plans" element={<Plans />} />
+        {/* <Route path="plans" element={<Plans />} />
         <Route
           path="why-us"
           element={<WhyUs />}
@@ -72,7 +72,7 @@ export const router = createBrowserRouter(
           // handle={{
           //   crumb: () => <Link to="/login">Messages</Link>,
           // }}
-        />
+        /> */}
         {/* <Route
           path="/service"
           element={<Home />}
